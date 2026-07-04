@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/portfolio.css') }}">
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="/">My Portfolio</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#skills">Skills</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#education">Education</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#certificates">Certificates</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="hero" id="about">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-5 text-center">
+
+<img src="{{ url_for('static', filename='../static/images/proffphoto.jpeg') }}"
+class="profile">
+
+</div>
+
+<div class="col-lg-7">
+
+<h1>Hi, I'm <span>Tamanna</span></h1>
+
+<h3>Artificial Intelligence and Machine Learning student</h3>
+
+<p>
+
+I am a passionate Python Developer with experience in Flask,
+SQL, Data Analysis, Machine Learning, and Web Scraping.
+I enjoy building real-world applications and solving complex
+problems using Python technologies.
+
+</p>
+
+<a href="/learnmore" class="btn btn-primary btn-lg mt-3">
+
+Explore Projects
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Skills -->
+
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="title">Technical Skills</h2>
+
+        <p class="subtitle">
+            Technologies and tools I work with
+        </p>
+
+        <div class="skills-wrapper">
+
+            <div class="skill-group">
+
+                <h4>Languages</h4>
+
+                <div class="skills">
+
+                    <span class="skill">Python</span>
+                    <span class="skill">SQL</span>
+                    <span class="skill">JavaScript</span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-group">
+
+                <h4>Frameworks</h4>
+
+                <div class="skills">
+
+                    <span class="skill">Flask</span>
+                    <span class="skill">Bootstrap</span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-group">
+
+                <h4>Data & ML</h4>
+
+                <div class="skills">
+
+                    <span class="skill">Pandas</span>
+                    <span class="skill">NumPy</span>
+                    <span class="skill">Matplotlib</span>
+                    <span class="skill">Machine Learning</span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-group">
+
+                <h4>Web Scraping</h4>
+
+                <div class="skills">
+
+                    <span class="skill">BeautifulSoup</span>
+                    <span class="skill">Selenium</span>
+                    <span class="skill">Requests</span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-group">
+
+                <h4>Tools</h4>
+
+                <div class="skills">
+
+                    <span class="skill">Git</span>
+                    <span class="skill">GitHub</span>
+                    <span class="skill">VS Code</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Education -->
+
+<section id="education">
+
+    <div class="container">
+
+        <h2 class="title">Education</h2>
+
+        <p class="subtitle">
+            My academic journey and learning path.
+        </p>
+
+        <div class="timeline">
+
+            <!-- Item 1 -->
+            <div class="timeline-item left">
+
+                <div class="content">
+
+                    <h3>Bachelor of Technology (B.Tech)</h3>
+
+                    <h5>Computer Science Engineering</h5>
+
+                    <p class="inst">Kurukshetra University</p>
+
+                    <p class="time">2024 - 2028</p>
+
+                    <ul>
+                        <li>Software Development & Data Structures</li>
+                        <li>Learning Python, Web Scraping, AI & ML</li>
+                        <li>Worked on multiple real-world projects</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        
+
+        
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Certificates -->
+
+<section id="certificates">
+
+<div class="container">
+
+<h2 class="title">Certificates</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="card cert">
+
+<h4>Python Programming</h4>
+
+<p>Completed Professional Python Course.</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card cert">
+
+<h4>MySQL</h4>
+
+<p>Database Management & Queries.</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card cert">
+
+<h4>Machine Learning</h4>
+
+<p>Introduction to Machine learning and Data analysis .</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<div class="container text-center">
+
+<h2 class="title">Contact</h2>
+
+<p>Email : tamannasaini33@gmail.com</p>
+
+<p>Phone : +91 XXXXX XXXXX</p>
+
+<p>GitHub : github.com/yourname</p>
+
+<p>LinkedIn : linkedin.com/in/yourname</p>
+
+<a href="/" class="btn btn-dark mt-3">
+
+Back Home
+
+</a>
+
+</div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

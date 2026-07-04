@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collegedunia Colleges</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/collegedunia.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 Collegedunia College Data</h1>
+
+    <p class="subtitle">
+        College Information Scraped from Collegedunia
+    </p>
+
+    {% if colleges %}
+
+    <div class="college-grid">
+
+        {% for college in colleges %}
+
+        <div class="college-card">
+
+            <h2>{{ college.College }}</h2>
+
+            <div class="info">
+                <strong>🏆 Ranking</strong>
+                <p>{{ college.Ranking }}</p>
+            </div>
+
+            <div class="info">
+                <strong>📊 Cutoff</strong>
+                <p>{{ college.Cutoff }}</p>
+            </div>
+
+            <div class="info">
+                <strong>📅 Application Deadline</strong>
+                <p>{{ college.Application_Deadline }}</p>
+            </div>
+
+            <div class="info">
+                <strong>💰 Fees</strong>
+                <p>{{ college.Fees }}</p>
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="empty">
+        <h2>No College Data Available</h2>
+    </div>
+
+    {% endif %}
+
+    <div class="btn-area">
+        <a href="/" class="home-btn">← Back to Home</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodreads Quotes</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/goodreads.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📚 Goodreads Quotes</h1>
+    <p class="subtitle">
+        Inspirational Quotes Scraped from Goodreads
+    </p>
+
+    {% if quotes %}
+
+    <div class="quotes-grid">
+
+        {% for quote in quotes %}
+
+        <div class="quote-card">
+
+            {% if quote.image %}
+            <img src="{{ quote.image }}" alt="Author">
+            {% endif %}
+
+            <div class="quote-text">
+                "{{ quote.quote }}"
+            </div>
+
+            <h3>{{ quote.author }}</h3>
+
+            <p class="likes">
+                ❤️ {{ quote.likes }}
+            </p>
+
+            {% if quote.tags %}
+            <div class="tags">
+                {{ quote.tags }}
+            </div>
+            {% endif %}
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="empty">
+        <h2>No Quotes Found</h2>
+    </div>
+
+    {% endif %}
+
+    <div class="btn-area">
+        <a href="/" class="home-btn">← Back to Home</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yahoo Finance Mutual Funds</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/mutualfunds.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📈 Yahoo Finance Mutual Funds</h1>
+
+<p class="subtitle">
+
+This project extracts the Top Mutual Funds from Yahoo Finance using
+Python, BeautifulSoup and Requests.
+
+</p>
+
+<div class="feature-box">
+
+<div class="feature-card">
+
+<h3>🌐 Website</h3>
+
+<p>Yahoo Finance</p>
+
+</div>
+
+<div class="feature-card">
+
+<h3>🐍 Language</h3>
+
+<p>Python</p>
+
+</div>
+
+<div class="feature-card">
+
+<h3>📚 Library</h3>
+
+<p>BeautifulSoup</p>
+
+</div>
+
+<div class="feature-card">
+
+<h3>📊 Output</h3>
+
+<p>Top Mutual Funds Table</p>
+
+</div>
+
+</div>
+
+<h2>Scraped Mutual Fund Data</h2>
+
+<div class="table-container">
+
+<table>
+
+{% if funds %}
+
+<tr>
+
+{% for heading in funds[0] %}
+
+<th>{{ heading }}</th>
+
+{% endfor %}
+
+</tr>
+
+{% for row in funds[1:] %}
+
+<tr>
+
+{% for col in row %}
+
+<td>{{ col }}</td>
+
+{% endfor %}
+
+</tr>
+
+{% endfor %}
+
+{% endif %}
+
+</table>
+
+</div>
+
+<div class="button">
+
+<a href="{{ url_for('learnmore') }}" class="btn">
+
+⬅ Back to Projects
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

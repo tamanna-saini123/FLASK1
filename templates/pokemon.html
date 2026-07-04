@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Pokédex Explorer</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/pokemon.css') }}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark px-4">
+
+<a class="navbar-brand fw-bold" href="/">
+My Portfolio
+</a>
+
+<a href="/api" class="btn btn-outline-light">
+
+← Back
+
+</a>
+
+</nav>
+
+<section class="hero">
+
+<div class="container text-center">
+
+<h1>Pokédex Explorer</h1>
+
+<p>
+
+Explore Pokémon using the PokéAPI
+
+</p>
+
+<div class="badge-row">
+
+<span>Python</span>
+
+<span>REST API</span>
+
+<span>PokéAPI</span>
+
+<span>JSON</span>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="container py-5">
+
+<div class="row g-4">
+
+{% for p in pokemon %}
+
+<div class="col-lg-3 col-md-4 col-sm-6">
+
+<div class="pokemon-card">
+
+<img src="{{ p.image }}"
+class="pokemon-image">
+
+<h4>{{ p.name }}</h4>
+
+<hr>
+
+<p>
+
+<strong>Type</strong><br>
+
+{{ p.types }}
+
+</p>
+
+<p>
+
+<strong>Height</strong><br>
+
+{{ p.height }}
+
+</p>
+
+<p>
+
+<strong>Weight</strong><br>
+
+{{ p.weight }}
+
+</p>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+</body>
+
+</html>

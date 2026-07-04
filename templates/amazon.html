@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Amazon Web Scraping</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/amazon.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🛒 Amazon Web Scraping Project</h1>
+
+<p class="subtitle">
+
+This project extracts Amazon product details using
+Python, BeautifulSoup, Requests and Pandas.
+
+</p>
+
+<div class="section">
+
+<h2>Project Features</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🛍 Product Name</h3>
+<p>Extracts Product Titles</p>
+</div>
+
+<div class="card">
+<h3>💰 Price</h3>
+<p>Current Product Price</p>
+</div>
+
+<div class="card">
+<h3>⭐ Rating</h3>
+<p>Customer Rating</p>
+</div>
+
+<div class="card">
+<h3>📝 Reviews</h3>
+<p>Total Reviews</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Scraped Amazon Products</h2>
+
+<table>
+
+<tr>
+
+<th>Product</th>
+
+<th>Price</th>
+
+<th>MRP</th>
+
+<th>Rating</th>
+
+<th>Reviews</th>
+
+</tr>
+
+{% for product in products %}
+
+<tr>
+
+<td>{{ product.title }}</td>
+
+<td>{{ product.price }}</td>
+
+<td>{{ product.mrp }}</td>
+
+<td>{{ product.rating }}</td>
+
+<td>{{ product.reviews }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+<div class="buttons">
+
+<a href="{{ url_for('learnmore') }}" class="btn">
+
+⬅ Back
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
