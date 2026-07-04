@@ -1,0 +1,96 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#0f172a,#111827,#1e3a8a);
+    color:white;
+}
+
+/* HERO */
+.hero{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    font-weight:700;
+}
+
+.hero p{
+    color:#cbd5e1;
+    font-size:18px;
+}
+
+.badge-row{
+    margin-top:20px;
+}
+
+.badge-row span{
+    display:inline-block;
+    margin:5px;
+    padding:8px 15px;
+    background:rgba(255,255,255,0.1);
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* CARD */
+.card-modern{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:0.4s;
+    height:100%;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.card-modern:hover{
+    transform:translateY(-10px) scale(1.02);
+    background:rgba(255,255,255,0.12);
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* ICON */
+.icon{
+    font-size:55px;
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+/* TEXT */
+.card-modern h3{
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.card-modern p{
+    color:#e2e8f0;
+    font-size:14px;
+    min-height:60px;
+}
+
+/* TAGS */
+.tags{
+    margin-top:15px;
+}
+
+.tags span{
+    display:inline-block;
+    background:#2563eb;
+    padding:5px 12px;
+    border-radius:15px;
+    font-size:12px;
+    margin:3px;
+}
+
+/* BUTTON */
+.btn-primary{
+    background:#2563eb;
+    border:none;
+    border-radius:25px;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}

@@ -1,0 +1,131 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef6f1;
+
+}
+
+.navbar{
+
+    background:#111827;
+
+}
+
+.hero{
+
+    background:linear-gradient(135deg,#1DB954,#15803d);
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+    font-weight:bold;
+
+}
+
+.hero p{
+
+    font-size:18px;
+    opacity:.9;
+
+}
+
+.song-card{
+
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    height:100%;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.3s;
+
+}
+
+.song-card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+.spotify-icon{
+
+    width:80px;
+    height:80px;
+    margin:auto;
+    margin-bottom:20px;
+
+    background:#1DB954;
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:38px;
+
+}
+
+.song-body{
+
+    text-align:center;
+
+}
+
+.song-body h4{
+
+    font-size:22px;
+    color:#111827;
+    margin-bottom:15px;
+    min-height:60px;
+
+}
+
+.song-body p{
+
+    color:#4b5563;
+    font-size:17px;
+    margin-bottom:15px;
+
+}
+
+.duration{
+
+    display:inline-block;
+    background:#dcfce7;
+    color:#166534;
+    padding:8px 18px;
+    border-radius:30px;
+    font-weight:600;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.song-body h4{
+
+    font-size:20px;
+
+}
+
+}
